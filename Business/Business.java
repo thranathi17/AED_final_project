@@ -4,17 +4,10 @@
  */
 package Business;
 
-import Hospital.AppointmentDirectory;
-import Hospital.HospitalDirectory;
-import Insurance.InsuranceAgentDirectory;
-import Insurance.InsuranceEnrollmentDirectory;
-import Insurance.InsurancePlanDetails;
-import Lab.LabDirectory;
-import Lab.LabTechnicianDirectory;
-import Lab.TestRequestDirectory;
-import Patient.PatientDirectory;
+import Lab.TestDirectory;
+import Lab.VaccinationDirectory;
 import Pharmacy.MedicineDirectory;
-import Prescription.PrescriptionDirectory;
+import Role.LabTechnicianRole;
 import Role.PharmacistRole;
 import Role.SystemAdminRole;
 import UserAccount.UserAccountDirectory;
@@ -24,52 +17,20 @@ import UserAccount.UserAccountDirectory;
  * @author divya
  */
 public class Business {
-    HospitalDirectory hospitals;
-    PatientDirectory patients;
-    InsuranceAgentDirectory insuranceAgents;
-    LabTechnicianDirectory labTechnicians;
-    
-    LabDirectory labs;
-    InsurancePlanDetails insurancePlans;   
-    UserAccountDirectory topLevelUserAccountDirectory;
-    InsuranceEnrollmentDirectory insuranceEnrollmentRequests;
-    AppointmentDirectory appointments;
-    MedicineDirectory medicines;
-    TestRequestDirectory testPerformRequests;
-    PrescriptionDirectory prescriptions;
+   UserAccountDirectory topLevelUserAccountDirectory;
+   MedicineDirectory medicineDir;
+   VaccinationDirectory vaccineDir;
+   TestDirectory testDir;
 
     public Business() {
-        this.hospitals = new HospitalDirectory();
-        this.labs = new LabDirectory();
-        //this.pharmacies = new PharmacyDirectory();
-        this.insurancePlans = new InsurancePlanDetails();
-        this.topLevelUserAccountDirectory = new UserAccountDirectory();
-        this.patients = new PatientDirectory();
-        this.insuranceAgents = new InsuranceAgentDirectory();
-        this.labTechnicians = new LabTechnicianDirectory();
-        this.insuranceEnrollmentRequests = new InsuranceEnrollmentDirectory();
-        this.appointments = new AppointmentDirectory();
-        this.medicines = new MedicineDirectory();
-        this.prescriptions = new PrescriptionDirectory();
-        this.testPerformRequests = new TestRequestDirectory();
-        this.topLevelUserAccountDirectory.createUserAccount("admin", "admin", new SystemAdminRole());
-        this.topLevelUserAccountDirectory.createUserAccount("pharmacist", "admin", new PharmacistRole());
-    }
-    
-    public PatientDirectory getPatients() {
-        return patients;
-    }
-
-    public void setPatients(PatientDirectory patients) {
-        this.patients = patients;
-    }
-
-    public InsuranceAgentDirectory getInsuranceAgents() {
-        return insuranceAgents;
-    }
-
-    public void setInsuranceAgents(InsuranceAgentDirectory insuranceAgents) {
-        this.insuranceAgents = insuranceAgents;
+         this.topLevelUserAccountDirectory = new UserAccountDirectory();
+         this.medicineDir = new MedicineDirectory();
+         this.vaccineDir = new VaccinationDirectory();
+         this.testDir= new TestDirectory();
+          this.topLevelUserAccountDirectory.createUserAccount("admin", "admin", new SystemAdminRole());
+          
+          this.topLevelUserAccountDirectory.createUserAccount("pharmacy", "pharmacy", new PharmacistRole());
+          this.topLevelUserAccountDirectory.createUserAccount("lab", "lab", new LabTechnicianRole());
     }
 
     public UserAccountDirectory getTopLevelUserAccountDirectory() {
@@ -79,83 +40,36 @@ public class Business {
     public void setTopLevelUserAccountDirectory(UserAccountDirectory topLevelUserAccountDirectory) {
         this.topLevelUserAccountDirectory = topLevelUserAccountDirectory;
     }
+
+    public MedicineDirectory getMedicineDir() {
+        return medicineDir;
+    }
+
+    public void setMedicineDir(MedicineDirectory medicineDir) {
+        this.medicineDir = medicineDir;
+    }
+
+    public VaccinationDirectory getVaccineDir() {
+        return vaccineDir;
+    }
+
+    public void setVaccineDir(VaccinationDirectory vaccineDir) {
+        this.vaccineDir = vaccineDir;
+    }
+
+    public TestDirectory getTestDir() {
+        return testDir;
+    }
+
+    public void setTestDir(TestDirectory testDir) {
+        this.testDir = testDir;
+    }
+    
+    
+    
    
     public static Business getInstance() {
         return new Business();
     }
-    
-    public HospitalDirectory getHospitals() {
-        return hospitals;
-    }
-
-    public void setHospitals(HospitalDirectory hospitals) {
-        this.hospitals = hospitals;
-    }
-
-    public LabDirectory getLabs() {
-        return labs;
-    }
-
-    public void setLabs(LabDirectory labs) {
-        this.labs = labs;
-    }
-
-    public InsurancePlanDetails getInsurancePlans() {
-        return insurancePlans;
-    }
-
-    public void setInsurancePlans(InsurancePlanDetails insurancePlans) {
-        this.insurancePlans = insurancePlans;
-    }
-
-    public InsuranceEnrollmentDirectory getInsuranceEnrollmentRequests() {
-        return insuranceEnrollmentRequests;
-    }
-
-    public void setInsuranceEnrollmentRequests(InsuranceEnrollmentDirectory insuranceEnrollmentRequests) {
-        this.insuranceEnrollmentRequests = insuranceEnrollmentRequests;
-    }
-
-    public AppointmentDirectory getAppointments() {
-        return appointments;
-    }
-
-    public void setAppointments(AppointmentDirectory appointments) {
-        this.appointments = appointments;
-    }
-
-    public MedicineDirectory getMedicines() {
-        return medicines;
-    }
-
-    public void setMedicines(MedicineDirectory medicines) {
-        this.medicines = medicines;
-    }
-
-    public PrescriptionDirectory getPrescriptions() {
-        return prescriptions;
-    }
-
-    public void setPrescriptions(PrescriptionDirectory prescriptions) {
-        this.prescriptions = prescriptions;
-    }
-
-    public LabTechnicianDirectory getLabTechnicians() {
-        return labTechnicians;
-    }
-
-    public void setLabTechnicians(LabTechnicianDirectory labTechnicians) {
-        this.labTechnicians = labTechnicians;
-    }
-
-    public TestRequestDirectory getTestPerformRequests() {
-        return testPerformRequests;
-    }
-
-    public void setTestPerformRequests(TestRequestDirectory testPerformRequests) {
-        this.testPerformRequests = testPerformRequests;
-    }
-    
-    
-    
+   
 }

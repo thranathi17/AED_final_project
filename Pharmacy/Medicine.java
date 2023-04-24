@@ -15,15 +15,14 @@ public class Medicine {
     String serialNumber;
     String medicineName;
     Date expiryDate;
+    boolean isAvailable;
     int availableCount;
     float price;
     
-    public Medicine(String medicineName, Date expiryDate, int availableCount, float price) {
+    public Medicine(String medicineName) {
         this.serialNumber = "M-" + count++;
         this.medicineName=medicineName;
-        this.expiryDate = expiryDate;
-        this.availableCount = availableCount;
-        this.price = price;
+       
     }
 
     public String getSerialNumber() {
@@ -50,6 +49,14 @@ public class Medicine {
         this.expiryDate = expiryDate;
     }
 
+    public boolean isIsAvailable() {
+        return isAvailable;
+    }
+
+    public void setIsAvailable(boolean isAvailable) {
+        this.isAvailable = isAvailable;
+    }
+
     public int getAvailableCount() {
         return availableCount;
     }
@@ -64,5 +71,9 @@ public class Medicine {
 
     public void setPrice(float price) {
         this.price = price;
-    } 
+    }
+    
+    
+    
+    
 }

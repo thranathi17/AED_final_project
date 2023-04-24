@@ -27,44 +27,37 @@ public class MedicineDirectory {
         this.medicineList = medicineList;
     }
     
-    public Medicine createMedicine
-    (    
-        String medicineName,
-        Date expiryDate,
-        int availableCount,
-        float price
-    )
-    {
-        Medicine medicine= new Medicine(medicineName, expiryDate, availableCount, price);       
+    
+    
+    public Medicine addMedicine(Medicine medicine) {
         this.medicineList.add(medicine);
-        return medicine;   
+        return medicine;
     }
-    
-    public Medicine findMedicine(String serialNumber){
-        for(Medicine m: this.medicineList) {
+    public Medicine createMedicine( 
             
-            if(m.getSerialNumber().equals(serialNumber)) {
-                return m;
-            }
-        }
-        return null;
-    }
-    
-    public Medicine findMedicineByName(String medName){
-        for(Medicine m: this.medicineList) {
-            
-            if(m.getMedicineName().equals(medName)) {
-                return m;
-            }
-        }
-        return null;
-    }
-    
-    public Medicine refillStock(String serialNumber, int quantity)
+            String medicineName,
+            Date expiryDate,
+            boolean isAvailable,
+            int availableCount,
+            float price
+          
+             )
     {
-        Medicine m = findMedicine(serialNumber);
-        m.setAvailableCount(m.getAvailableCount() + quantity);
-        return m;
+        Medicine medicine= new Medicine(medicineName);
+
+       
+       // medicine.setSerialNumber(serialNumber);
+        medicine.setMedicineName(medicineName);
+        medicine.setExpiryDate(expiryDate);
+        medicine.setIsAvailable(isAvailable);
+        medicine.setAvailableCount(availableCount);
+        medicine.setPrice(price);
+        
+        
+        this.medicineList.add(medicine);
+
+         return medicine;
+        
     }
     
     
@@ -80,5 +73,13 @@ public class MedicineDirectory {
 //    }
 //    
 //    
-//    
+//    public Medicine findMedicine(String serialNumber){
+//        for(Medicine m: this.medicineList) {
+//            
+//            if(m.getSerialNumber().equals(serialNumber)) {
+//                return m;
+//            }
+//        }
+//        return null;
+//    }
 }
