@@ -5,7 +5,6 @@
 package Role;
 
 import Business.Business;
-import UI.SystemAdminJPanels.SysAdminJFrame;
 import UI.SystemAdminJPanels.SystemAdminJFrame;
 import UserAccount.UserAccount;
 import javax.swing.JFrame;
@@ -18,7 +17,7 @@ public class SystemAdminRole extends Role {
 
     @Override
     public JFrame createWorkArea(Business business, UserAccount useraccount) {
-        return new SysAdminJFrame(business,useraccount);
+        return new SystemAdminJFrame(business,useraccount);
     }
     
 }

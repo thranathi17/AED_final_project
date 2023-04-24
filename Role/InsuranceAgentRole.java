@@ -6,8 +6,7 @@ package Role;
 
 import Business.Business;
 import UI.DoctorJPanels.DoctorJFrame;
-import UI.InsuranceJPanels.InsAgentJFrame;
-import UI.InsuranceJPanels.InsuranceAgentRegistrationJFrame;
+import UI.InsuranceJPanels.InsuranceAgentJFrame;
 import UserAccount.UserAccount;
 import javax.swing.JFrame;
 
@@ -18,6 +17,6 @@ import javax.swing.JFrame;
 public class InsuranceAgentRole extends Role {
    @Override
     public JFrame createWorkArea(Business business, UserAccount useraccount) {
-        return new InsAgentJFrame(business, useraccount);
+        return new InsuranceAgentJFrame(business,useraccount);
     }
 }

@@ -44,10 +44,10 @@ public class LoginJFrame extends javax.swing.JFrame {
     }
 
    public void populateDropdown() {
-        JComboBox.removeAllItems();
+        jComboBox1.removeAllItems();
         
         for(String rolename: Role.getAllRoles()) {
-            JComboBox.addItem(rolename);
+            jComboBox1.addItem(rolename);
         }
     }
     /**
@@ -59,9 +59,6 @@ public class LoginJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        rSComboMetroBeanInfo1 = new rojerusan.RSComboMetroBeanInfo();
-        rSComboMetroBeanInfo2 = new rojerusan.RSComboMetroBeanInfo();
-        rSComboMetroBeanInfo3 = new rojerusan.RSComboMetroBeanInfo();
         jSplitPane1 = new javax.swing.JSplitPane();
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -69,13 +66,13 @@ public class LoginJFrame extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        fusername = new app.bolivia.swing.JCTextField();
         jLabel3 = new javax.swing.JLabel();
-        rSMaterialButtonCircle1 = new rojerusan.RSMaterialButtonCircle();
-        fpassword = new app.bolivia.swing.JCTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        JComboBox = new rojerusan.RSComboMetro();
+        fusername = new javax.swing.JTextField();
+        fpassword = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -86,7 +83,6 @@ public class LoginJFrame extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(153, 255, 153));
         jLabel4.setText("Hospital  Management System");
 
-        jLabel6.setIcon(new javax.swing.ImageIcon("E:\\Masters\\Sem 1\\ADE\\HospitalManagementSystem\\src\\main\\java\\icons\\Hospital.jpg")); // NOI18N
         jLabel6.setText("jLabel6");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -120,31 +116,16 @@ public class LoginJFrame extends javax.swing.JFrame {
 
         jLabel2.setText("Password");
 
-        fusername.setBackground(new java.awt.Color(153, 153, 255));
-        fusername.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
-        fusername.setPlaceholder("Username");
-
         jLabel3.setText("Login");
 
-        rSMaterialButtonCircle1.setText("Login");
-        rSMaterialButtonCircle1.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setText("LOGIN");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rSMaterialButtonCircle1ActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
 
-        fpassword.setBackground(new java.awt.Color(153, 153, 255));
-        fpassword.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
-        fpassword.setPlaceholder("Password");
-        fpassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fpasswordActionPerformed(evt);
-            }
-        });
-
-        jLabel9.setIcon(new javax.swing.ImageIcon("E:\\Masters\\Sem 1\\ADE\\HospitalManagementSystem\\src\\main\\java\\icons\\icons8_Account_50px.png")); // NOI18N
-
-        jLabel14.setIcon(new javax.swing.ImageIcon("E:\\Masters\\Sem 1\\ADE\\HospitalManagementSystem\\src\\main\\java\\icons\\icons8_Secure_50px.png")); // NOI18N
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Doctor", "Patient", "Nurse", "Receptionist", "Lab Technician", "Pharmacy", "Insurance Agent", "Admin" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -158,22 +139,17 @@ public class LoginJFrame extends javax.swing.JFrame {
                             .addComponent(jLabel9)
                             .addComponent(jLabel14))
                         .addGap(55, 55, 55)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel2)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(fpassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(fusername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel1)))
+                            .addComponent(jLabel1)
+                            .addComponent(jButton1)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(fpassword)
+                            .addComponent(fusername)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(140, 140, 140)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(125, 125, 125)
-                        .addComponent(rSMaterialButtonCircle1, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(79, 79, 79)
-                        .addComponent(JComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(196, Short.MAX_VALUE))
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(279, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -184,23 +160,24 @@ public class LoginJFrame extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(fusername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(21, 21, 21))
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(fusername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(fpassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(38, 38, 38)
                         .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(35, 35, 35)
-                .addComponent(JComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
-                .addComponent(rSMaterialButtonCircle1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(jButton1)
+                .addContainerGap(153, Short.MAX_VALUE))
         );
 
         jSplitPane1.setRightComponent(jPanel1);
@@ -229,6 +206,22 @@ public class LoginJFrame extends javax.swing.JFrame {
            JOptionPane.showMessageDialog(null, "Invalid Credentials");
         }
     }//GEN-LAST:event_rSMaterialButtonCircle1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Boolean foundUser = false;
+        
+        if(this.business.getTopLevelUserAccountDirectory().authenticateUser(fusername.getText(), fusername.getText()) != null) {
+            UserAccount user = this.business.getTopLevelUserAccountDirectory().authenticateUser(fusername.getText(), fpassword.getText());
+            foundUser = true;
+            user.getRole().createWorkArea(this.business,user);
+            this.setVisible(false);
+    }
+//        // if user not found
+          if(!foundUser) {
+           JOptionPane.showMessageDialog(null, "Invalid Credentials");
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -266,9 +259,10 @@ public class LoginJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private rojerusan.RSComboMetro JComboBox;
-    private app.bolivia.swing.JCTextField fpassword;
-    private app.bolivia.swing.JCTextField fusername;
+    private javax.swing.JTextField fpassword;
+    private javax.swing.JTextField fusername;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
@@ -279,9 +273,5 @@ public class LoginJFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JSplitPane jSplitPane1;
-    private rojerusan.RSComboMetroBeanInfo rSComboMetroBeanInfo1;
-    private rojerusan.RSComboMetroBeanInfo rSComboMetroBeanInfo2;
-    private rojerusan.RSComboMetroBeanInfo rSComboMetroBeanInfo3;
-    private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle1;
     // End of variables declaration//GEN-END:variables
 }

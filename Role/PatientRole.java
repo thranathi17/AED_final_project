@@ -5,7 +5,7 @@
 package Role;
 
 import Business.Business;
-import UI.InsuranceJPanels.InsuranceAgentRegistrationJFrame;
+import UI.InsuranceJPanels.InsuranceAgentJFrame;
 import UI.PatientJPanels.PatientJFrame;
 import UserAccount.UserAccount;
 import javax.swing.JFrame;

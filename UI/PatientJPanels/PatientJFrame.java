@@ -5,8 +5,6 @@
 package UI.PatientJPanels;
 
 import Business.Business;
-import UI.MainJFrame;
-import UI.SystemAdminJPanels.DoctorsJPanel;
 import UserAccount.UserAccount;
 
 /**
@@ -19,9 +17,8 @@ public class PatientJFrame extends javax.swing.JFrame {
      * Creates new form PatientJFrame
      */
     
-    Business business;
-    UserAccount useraccount;
-    
+     Business business;
+UserAccount useraccount;
     public PatientJFrame() {
         initComponents();
     }
@@ -29,6 +26,8 @@ public class PatientJFrame extends javax.swing.JFrame {
         initComponents();
         this.setVisible(true);
         this.business = business;
+       
+
         this.useraccount = useraccount;
        
     }
@@ -43,127 +42,25 @@ public class PatientJFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jSplitPane1 = new javax.swing.JSplitPane();
-        jPanel2 = new javax.swing.JPanel();
-        ptnInsPlans = new javax.swing.JButton();
-        ptnApts = new javax.swing.JButton();
-        ptnVitals = new javax.swing.JButton();
-        ptnPres = new javax.swing.JButton();
-        ptnBills = new javax.swing.JButton();
-        ptnlogout = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jSplitPane1.setDividerLocation(200);
-        jSplitPane1.setDividerSize(10);
-
-        ptnInsPlans.setText("Insurance Plans");
-        ptnInsPlans.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ptnInsPlansActionPerformed(evt);
-            }
-        });
-
-        ptnApts.setText("Appointments");
-        ptnApts.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ptnAptsActionPerformed(evt);
-            }
-        });
-
-        ptnVitals.setText("Vitals");
-
-        ptnPres.setText("Prescriptions");
-        ptnPres.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ptnPresActionPerformed(evt);
-            }
-        });
-
-        ptnBills.setText("Bills");
-
-        ptnlogout.setText("Logout");
-        ptnlogout.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ptnlogoutActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(ptnInsPlans, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ptnApts, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ptnVitals, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ptnPres, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ptnBills, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ptnlogout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(57, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(66, 66, 66)
-                .addComponent(ptnInsPlans)
-                .addGap(18, 18, 18)
-                .addComponent(ptnApts)
-                .addGap(18, 18, 18)
-                .addComponent(ptnVitals)
-                .addGap(18, 18, 18)
-                .addComponent(ptnPres)
-                .addGap(18, 18, 18)
-                .addComponent(ptnBills)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 238, Short.MAX_VALUE)
-                .addComponent(ptnlogout)
-                .addGap(159, 159, 159))
-        );
-
-        jSplitPane1.setLeftComponent(jPanel2);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jSplitPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1367, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGap(0, 935, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jSplitPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 673, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGap(0, 534, Short.MAX_VALUE)
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void ptnAptsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ptnAptsActionPerformed
-        jSplitPane1.setRightComponent(new AppointmentsJPanel(this.business, this.useraccount));
-    }//GEN-LAST:event_ptnAptsActionPerformed
-
-    private void ptnlogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ptnlogoutActionPerformed
-        // TODO add your handling code here:
-        this.setVisible(false);
-        new MainJFrame(business);
-    }//GEN-LAST:event_ptnlogoutActionPerformed
-
-    private void ptnInsPlansActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ptnInsPlansActionPerformed
-        jSplitPane1.setRightComponent(new InsurancePlansJPanel(this.business, this.useraccount));
-    }//GEN-LAST:event_ptnInsPlansActionPerformed
-
-    private void ptnPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ptnPresActionPerformed
-        jSplitPane1.setRightComponent(new PatientPrescriptionsJPanel(this.business, this.useraccount));
-    }//GEN-LAST:event_ptnPresActionPerformed
 
     /**
      * @param args the command line arguments
@@ -202,13 +99,5 @@ public class PatientJFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JSplitPane jSplitPane1;
-    private javax.swing.JButton ptnApts;
-    private javax.swing.JButton ptnBills;
-    private javax.swing.JButton ptnInsPlans;
-    private javax.swing.JButton ptnPres;
-    private javax.swing.JButton ptnVitals;
-    private javax.swing.JButton ptnlogout;
     // End of variables declaration//GEN-END:variables
 }

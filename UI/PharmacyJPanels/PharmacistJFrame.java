@@ -5,8 +5,7 @@
 package UI.PharmacyJPanels;
 
 import Business.Business;
-import UI.MainJFrame;
-import UI.SystemAdminJPanels.StaffJPanel;
+import UI.LoginJPanel.LoginJFrame;
 import UserAccount.UserAccount;
 
 /**
@@ -23,13 +22,15 @@ public class PharmacistJFrame extends javax.swing.JFrame {
     public PharmacistJFrame() {
         initComponents();
     }
-    public PharmacistJFrame(Business business, UserAccount useraccount) {
-          initComponents();
-          this.setVisible(true);
-          this.business = business;
-          this.useraccount = useraccount;
+  public PharmacistJFrame(Business business, UserAccount useraccount) {
+        initComponents();
+        this.setVisible(true);
+        this.business = business;
+       
 
-      }
+        this.useraccount = useraccount;
+       
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -39,34 +40,31 @@ public class PharmacistJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jSplitPane1 = new javax.swing.JSplitPane();
         jPanel1 = new javax.swing.JPanel();
-        medicinesBtn = new javax.swing.JButton();
-        pharmLogoutBtn = new javax.swing.JButton();
-        prescBtn = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jSplitPane1 = new javax.swing.JSplitPane();
+        jPanel2 = new javax.swing.JPanel();
+        addMedicineBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jSplitPane1.setDividerLocation(200);
+        jPanel1.setBackground(new java.awt.Color(153, 153, 255));
 
-        medicinesBtn.setText("Medicines");
-        medicinesBtn.addActionListener(new java.awt.event.ActionListener() {
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Hospital Management System");
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Welcome, Pharmacist");
+
+        jButton1.setText("BACK");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                medicinesBtnActionPerformed(evt);
-            }
-        });
-
-        pharmLogoutBtn.setText("Logout");
-        pharmLogoutBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pharmLogoutBtnActionPerformed(evt);
-            }
-        });
-
-        prescBtn.setText("Prescriptions");
-        prescBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                prescBtnActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -75,59 +73,73 @@ public class PharmacistJFrame extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(pharmLogoutBtn)
-                    .addComponent(medicinesBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(prescBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(33, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(26, 26, 26))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addGap(54, 54, 54))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel2)
+                .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(63, 63, 63)
-                .addComponent(medicinesBtn)
-                .addGap(27, 27, 27)
-                .addComponent(prescBtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 399, Short.MAX_VALUE)
-                .addComponent(pharmLogoutBtn)
-                .addGap(306, 306, 306))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1)
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
-        jSplitPane1.setLeftComponent(jPanel1);
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 80));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1374, Short.MAX_VALUE)
-                .addContainerGap())
+        addMedicineBtn.setText("Add Medicine");
+        addMedicineBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addMedicineBtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(addMedicineBtn)
+                .addGap(0, 7, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jSplitPane1)
-                .addContainerGap())
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(283, Short.MAX_VALUE)
+                .addComponent(addMedicineBtn)
+                .addGap(174, 174, 174))
         );
+
+        jSplitPane1.setLeftComponent(jPanel2);
+
+        getContentPane().add(jSplitPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 83, 590, 480));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void pharmLogoutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pharmLogoutBtnActionPerformed
+    private void addMedicineBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addMedicineBtnActionPerformed
+        // TODO add your handling code here:
+        jSplitPane1.setRightComponent(new AddMedicine(this.business, this.useraccount));
+    }//GEN-LAST:event_addMedicineBtnActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
         this.setVisible(false);
-        new MainJFrame(business);
-    }//GEN-LAST:event_pharmLogoutBtnActionPerformed
-
-    private void medicinesBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_medicinesBtnActionPerformed
-        jSplitPane1.setRightComponent(new MedicinesJPanel(this.business, this.useraccount));
-    }//GEN-LAST:event_medicinesBtnActionPerformed
-
-    private void prescBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prescBtnActionPerformed
-        jSplitPane1.setRightComponent(new PrescriptionsJPanel(this.business, this.useraccount));
-    }//GEN-LAST:event_prescBtnActionPerformed
+        new LoginJFrame(business, useraccount);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -159,16 +171,18 @@ public class PharmacistJFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PharmacistJFrame().setVisible(true);
+              //  new PharmacistJFrame().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton addMedicineBtn;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JSplitPane jSplitPane1;
-    private javax.swing.JButton medicinesBtn;
-    private javax.swing.JButton pharmLogoutBtn;
-    private javax.swing.JButton prescBtn;
     // End of variables declaration//GEN-END:variables
 }

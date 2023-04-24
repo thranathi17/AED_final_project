@@ -4,29 +4,22 @@
  */
 package Lab;
 
-import Person.Person;
+import UserAccount.UserAccount;
 
 /**
  *
  * @author thran
  */
-public class LabTechnician extends Person {
-    private static int count = 0;
-    
-    public LabTechnician(
-            String firstName,
-            String lastName,
-            String email,
-            String address,
-            String phoneNummber
-    ) 
-    {
-           super();
-           this.id = "LAB-TECH-" + count++;
-           this.firstName = firstName;
-           this.lastName = lastName;
-           this.email = email;
-           this.address = address;
-           this.phoneNumber = phoneNummber;
+public class LabTechnician  extends UserAccount {
+    String technicianName;
+
+    public String getTechnicianName() {
+        return technicianName;
     }
+
+    public void setTechnicianName(String technicianName) {
+        this.technicianName = technicianName;
+    }
+   
+    
 }

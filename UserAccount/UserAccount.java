@@ -14,6 +14,10 @@ import Role.Role;
  */
 public class UserAccount {
      private static int count = 0;
+     private String firstName;
+     private String lastName;
+     private String email;
+     private String contact;
     private String accountId;
     private String username;
     private String password;
